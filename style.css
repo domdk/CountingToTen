@@ -142,13 +142,17 @@ body {
     width: 3px;
     height: 3px;
     margin: 20px;
-    background-color: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 100%);
     border-radius: 50%;
     box-shadow: 0 0 2px hsl(0, 0%, 100%);
     position: absolute;
     left: 30px;
     top: 50px;
+    animation: animate 20ms infinite;
 }
+
+
+
 
 .background-star2 {
     width: 2px;
@@ -160,6 +164,7 @@ body {
     position: absolute;
     left: 250px;
     top: 100px;
+    animation: animate 20ms infinite;
 }
 
 
@@ -173,6 +178,7 @@ body {
     position: absolute;
     left: 800px;
     top: 800px;
+    animation: animate 20ms infinite;
 }
 
 
@@ -186,6 +192,7 @@ body {
     position: absolute;
     left: 500px;
     top: 500px;
+    animation: animate 20ms infinite;
 }
 
 .background-star5 {
@@ -198,6 +205,7 @@ body {
     position: absolute;
     left: 900px;
     top: 200px;
+    animation: animate 20ms infinite;
 }
 
 .background-star6 {
@@ -210,6 +218,7 @@ body {
     position: absolute;
     left: 1100px;
     top: 75px;
+    animation: animate 20ms infinite;
 }
 
 .background-star7 {
@@ -222,6 +231,7 @@ body {
     position: absolute;
     left: 100px;
     top: 700px;
+    animation: animate 20ms infinite;
 }
 
 .background-star8 {
@@ -234,6 +244,7 @@ body {
     position: absolute;
     left: 1050px;
     top: 600px;
+    animation: animate 20ms infinite;
 }
 
 .background-star9 {
@@ -246,6 +257,8 @@ body {
     position: absolute;
     left: 150px;
     top: 400px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star10 {
@@ -258,6 +271,7 @@ body {
     position: absolute;
     left: 1150px;
     top: 400px;
+    animation: animate 20ms infinite;
 }
 
 
@@ -271,6 +285,7 @@ body {
     position: absolute;
     left: 1500px;
     top: 750px;
+    animation: animate 20ms infinite;
 }
 
 .background-star12 {
@@ -283,6 +298,8 @@ body {
     position: absolute;
     left: 1320px;
     top: 550px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star13 {
@@ -295,6 +312,8 @@ body {
     position: absolute;
     left: 550px;
     top: 250px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star14 {
@@ -307,6 +326,8 @@ body {
     position: absolute;
     left: 1550px;
     top: 250px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star15 {
@@ -319,6 +340,8 @@ body {
     position: absolute;
     left: 1750px;
     top: 50px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star16 {
@@ -331,6 +354,9 @@ body {
     position: absolute;
     left: 1750px;
     top: 850px;
+
+    animation: animate 20ms infinite;
+
 }
 
 
@@ -344,6 +370,8 @@ body {
     position: absolute;
     left: 1670px;
     top: 450px;
+    animation: animate 20ms infinite;
+
 }
 
 
@@ -357,6 +385,8 @@ body {
     position: absolute;
     left: 420px;
     top: 810px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star19 {
@@ -369,6 +399,8 @@ body {
     position: absolute;
     left: 820px;
     top: 410px;
+    animation: animate 20ms infinite;
+
 }
 
 .background-star20 {
@@ -381,7 +413,25 @@ body {
     position: absolute;
     left: 820px;
     top: 110px;
+    animation: animate 20ms infinite;
+
 }
+
+@keyframes animate {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .container {
     display: flex;
