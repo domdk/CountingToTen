@@ -18,6 +18,7 @@ h5,
 h6,
 p,
 blockquote,
+button,
 pre,
 a,
 abbr,
@@ -136,6 +137,7 @@ table {
 
 body {
     background: hsl(240, 84%, 10%);
+    font-family: 'Cherry Bomb One', cursive;
 }
 
 .background-star1 {
@@ -150,9 +152,6 @@ body {
     top: 50px;
     animation: animate 20ms infinite;
 }
-
-
-
 
 .background-star2 {
     width: 2px;
@@ -445,11 +444,12 @@ body {
 
 
 .container h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2em;
-    font-weight: 700;
+    font-size: 4em;
+    font-weight: 400;
     color: white;
 }
+
+
 
 .starOne {
     width: 50%;
@@ -464,4 +464,20 @@ body {
     height: 50%;
     background: url(one.png) no-repeat center;
     margin: 0 auto;
+}
+
+.btn button {
+    font-size: 1em;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.startover {
+    background: hsl(212, 92%, 44%);
+}
+
+.next {
+    background: hsl(49, 100%, 50%);
 }
