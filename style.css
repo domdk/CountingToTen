@@ -451,20 +451,20 @@ body {
 
 
 
-.starOne {
+/* .starOne {
     width: 50%;
     height: 50%;
     background: url(star.png) no-repeat center;
     margin: 0 auto;
 
-}
+} */
 
-.one {
+/* .one {
     width: 50%;
     height: 50%;
     background: url(one.png) no-repeat center;
     margin: 0 auto;
-}
+} */
 
 .btn button {
     font-size: 1em;
@@ -474,10 +474,10 @@ body {
     margin: 10px;
 }
 
-.startover {
+#startOver {
     background: hsl(212, 92%, 44%);
 }
 
-.next {
+#next {
     background: hsl(49, 100%, 50%);
 }
