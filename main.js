@@ -1,6 +1,10 @@
 
 /*Count the Stars! APP - DomDk*/
 
+
+
+
+
 let container = document.querySelector('.allStars');
 const newImage = document.createElement('img');
 const baseURL = 'https://domdk.github.io/CountingToTen/images/';
@@ -44,16 +48,56 @@ nextButton.addEventListener('click', function () {
 startOverButton.addEventListener('click', function () {
     count = 0;
     container.innerHTML = "";
-
     container.append(title2);
     title2.classList.add('title');
     title2.innerHTML = "Lets count again!";
-
-    nextButton.innerHTML = "Count Again";
-
+    nextButton.innerHTML = "Count";
     const countAgain = new Audio('https://domdk.github.io/CountingToTen/soundfx/count_again.wav');
     countAgain.play();
-
-
 })
 
+
+let nightSky = document.querySelector('.nightSky');
+
+function createStars(size) {
+    // let starCount = 20;
+
+    // let i = 0;
+    // while (i < starCount) {
+    //     let star = document.createElement('div');
+    //     star.classList.add('.starDiv');
+    //     let x = Math.floor(Math.random() * 10);
+    //     let h = Math.floor(Math.random() * 1);
+
+    //     star.style.left = x + 'px';
+    //     star.style.width = 1 + 'px';
+    //     style.style.height = h + 'px';
+
+    //     nightSky.append(star);
+    //     i++;
+
+
+    let star = document.createElement('div');
+    star.classList.add('starDiv');
+
+    let size = Math.floor(Math.random() * 5) + 1;
+    // star.classList.add(`blink_${randRange5}`);
+
+    let widthAndHeight = random(size, 'px');
+    star.style.height = star.style.width = widthAndHeight;
+
+    star.style.left = random(window.innerWidth, 'px');
+    star.style.top = random(window.innerHeight, 'px');
+
+    nightSky.append(star);
+}
+// return stars();
+
+
+function paintStars(stars, size) {
+    for (let i = 0; i < stars; i++) {
+        createStars(size);
+    }
+}
+
+paintStars(50, size);

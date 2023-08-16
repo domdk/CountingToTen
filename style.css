@@ -135,24 +135,36 @@ table {
     border-spacing: 0;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
 body {
-    width: auto;
-    background: hsl(240, 84%, 10%);
+
     font-family: 'Cherry Bomb One', cursive;
 }
 
-.bkgrndStars {
+.nightSky {
     width: 100%;
+    height: 100%;
     margin: auto;
-    background-size: cover;
+    background: hsl(240, 84%, 10%);
     z-index: -1;
     position: absolute;
-    top: 0;
 }
 
+.starDiv {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
 
-
-
+/* 
 .background-star1 {
     width: 3px;
     height: 3px;
@@ -443,17 +455,16 @@ body {
     100% {
         opacity: 1;
     }
-}
+} */
 
 
 .main {
     width: 100%;
     height: 100%;
-    margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
 }
 
 
@@ -472,18 +483,19 @@ h1 {
 
 .allStars {
     width: 600px;
-    height: 500px;
-    margin: auto;
+    height: 600px;
+    margin: 24px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    border: 5px dashed #ff00bf;
 }
 
 
 img {
-    width: 150px;
+    width: 200px;
     margin: auto;
 }
 
@@ -510,27 +522,46 @@ button {
     font-size: 2rem;
 }
 
+.startOver:hover {
+    cursor: pointer;
+    background: hsl(212, 92%, 44%);
+    font-size: 2.2rem;
+    transition: 200ms;
+}
+
+
 .next {
     background: hsl(293, 100%, 54%);
     font-size: 3.5rem;
 }
 
+
+
 .next:hover {
-    background: hsl(293, 73%, 63%);
-    transform: scale(1.1);
+    cursor: pointer;
+    background: hsl(300, 100%, 50%);
+    transform: scale(1);
     font-size: 3.7rem;
+    transition: 200ms;
 }
 
 
 
 @media (max-width: 400px) {
+
+    html {
+        overflow: hidden;
+    }
+
+    .main {
+        margin: auto;
+        overflow: hidden;
+    }
+
     .bkgrndStars {
         width: 100%;
         margin: auto;
-        background-size: cover;
-        z-index: -1;
-        position: absolute;
-        top: 0;
+
     }
 
     .allStars {
