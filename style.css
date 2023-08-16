@@ -518,14 +518,15 @@ button {
 }
 
 .startOver {
+    width: 40%;
     background: hsl(212, 92%, 44%);
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .startOver:hover {
     cursor: pointer;
     background: hsl(212, 92%, 44%);
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     transition: 200ms;
 }
 
