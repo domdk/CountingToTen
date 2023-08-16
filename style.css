@@ -136,30 +136,22 @@ table {
 }
 
 body {
+    width: auto;
     background: hsl(240, 84%, 10%);
     font-family: 'Cherry Bomb One', cursive;
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-}
-
-
-.main h1 {
-    font-size: 4em;
-    font-weight: 400;
-    color: white;
-}
-
-#bkgrndStars {
+.bkgrndStars {
+    width: 100%;
+    margin: auto;
+    background-size: cover;
     z-index: -1;
+    position: absolute;
+    top: 0;
 }
+
+
+
 
 .background-star1 {
     width: 3px;
@@ -453,44 +445,55 @@ body {
     }
 }
 
+
+.main {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+h1 {
+    font-size: 4em;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
 .title {
     font-size: 3rem;
     text-align: center;
     color: #FDCA00;
 }
 
-#allStars {
-    max-width: 800px;
-    max-height: 600px;
+.allStars {
+    width: 600px;
+    height: 500px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 
 }
 
 
 img {
-    width: 200px;
-    /* height: 250px; */
-    /* background: url(star.png) no-repeat center; */
-    margin: 0 auto;
-
+    width: 150px;
+    margin: auto;
 }
 
-/* .one {
-    width: 50%;
-    height: 50%;
-    background: url(one.png) no-repeat center;
-    margin: 0 auto;
-} */
 
 .btn {
     width: 300px;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
 button {
@@ -499,16 +502,38 @@ button {
     padding: 1rem;
     border: 0;
     border-radius: 20px;
+    text-align: center;
 }
 
-#startOver {
+.startOver {
     background: hsl(212, 92%, 44%);
     font-size: 2rem;
 }
 
-#next {
+.next {
     background: hsl(293, 100%, 54%);
     font-size: 3.5rem;
+}
+
+.next:hover {
+    background: hsl(293, 73%, 63%);
+    transform: scale(1.1);
+    font-size: 3.7rem;
+}
+
+
+
+@media (max-width: 400px) {
+    .allStars {
+        width: 300px;
+        height: 400px;
+
+    }
+
+    img {
+        width: 100px;
+
+    }
 }
 
 /* * {

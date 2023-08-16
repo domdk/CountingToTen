@@ -1,13 +1,14 @@
 
 /*Count the Stars! APP - DomDk*/
 
-let container = document.querySelector('#allStars');
+let container = document.querySelector('.allStars');
 const newImage = document.createElement('img');
 const baseURL = '/images/';
 const baseFxURL = '/soundfx/';
-const startOverButton = document.querySelector('#startOver');
-const nextButton = document.querySelector('#next');
+const startOverButton = document.querySelector('.startOver');
+const nextButton = document.querySelector('.next');
 const title = document.querySelector('.title');
+const title2 = document.createElement('h2');
 let count = 0;
 
 // const star1 = document.getElementById('#star1');
@@ -29,6 +30,7 @@ nextButton.addEventListener('click', function () {
 
             voiceCount.play();
             title.innerHTML = "";
+            title2.innerHTML = "";
             newImage.src = `${baseURL}${count}.png`;
             star.appendChild(newImage);
             container.append(star);
@@ -38,11 +40,20 @@ nextButton.addEventListener('click', function () {
 })
 
 
+
 startOverButton.addEventListener('click', function () {
-    container.innerHTML = "";
-    nextButton.innerHTML = "Count Again";
     count = 0;
-    title.innerText = "Lets count the stars again!"
+    container.innerHTML = "";
+
+    container.append(title2);
+    title2.classList.add('title');
+    title2.innerHTML = "Lets count again!";
+
+    nextButton.innerHTML = "Count Again";
+
+    const countAgain = new Audio('/soundfx/count_again.wav');
+    countAgain.play();
+
 
 })
 
