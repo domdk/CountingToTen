@@ -3,9 +3,11 @@
 
 let container = document.querySelector('#allStars');
 const newImage = document.createElement('img');
-const baseURL = '/images/'
+const baseURL = '/images/';
+const baseFxURL = '/soundfx/';
 const startOverButton = document.querySelector('#startOver');
 const nextButton = document.querySelector('#next');
+const title = document.querySelector('.title');
 let count = 0;
 
 // const star1 = document.getElementById('#star1');
@@ -19,11 +21,14 @@ let count = 0;
 
 nextButton.addEventListener('click', function () {
     for (let i = 1; i <= 1; i++) {
-
-        if (count <= 9) {
+        ++count;
+        if (count <= 10) {
             const star = document.createElement('div');
             const newImage = document.createElement('img');
-            count++;
+            const voiceCount = new Audio(`${baseFxURL}${count}.wav`)
+
+            voiceCount.play();
+            title.innerHTML = "";
             newImage.src = `${baseURL}${count}.png`;
             star.appendChild(newImage);
             container.append(star);
@@ -35,7 +40,9 @@ nextButton.addEventListener('click', function () {
 
 startOverButton.addEventListener('click', function () {
     container.innerHTML = "";
-    nextButton.innerText = "Next";
+    nextButton.innerHTML = "Count Again";
     count = 0;
+    title.innerText = "Lets count the stars again!"
+
 })
 

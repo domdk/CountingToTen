@@ -157,6 +157,10 @@ body {
     color: white;
 }
 
+#bkgrndStars {
+    z-index: -1;
+}
+
 .background-star1 {
     width: 3px;
     height: 3px;
@@ -167,6 +171,7 @@ body {
     position: absolute;
     left: 30px;
     top: 50px;
+
     animation: animate 20ms infinite;
 }
 
@@ -448,8 +453,15 @@ body {
     }
 }
 
+.title {
+    font-size: 3rem;
+    text-align: center;
+    color: #FDCA00;
+}
+
 #allStars {
     max-width: 800px;
+    max-height: 600px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -459,7 +471,7 @@ body {
 
 
 img {
-    width: 250px;
+    width: 200px;
     /* height: 250px; */
     /* background: url(star.png) no-repeat center; */
     margin: 0 auto;
@@ -473,22 +485,32 @@ img {
     margin: 0 auto;
 } */
 
-.btn button {
-    font-size: 1em;
-    padding: 10px;
+.btn {
+    width: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+button {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 1rem;
     border: 0;
-    border-radius: 5px;
-    margin: 10px;
+    border-radius: 20px;
 }
 
 #startOver {
     background: hsl(212, 92%, 44%);
+    font-size: 2rem;
 }
 
 #next {
-    background: hsl(49, 100%, 50%);
+    background: hsl(293, 100%, 54%);
+    font-size: 3.5rem;
 }
 
-* {
+/* * {
     outline: 1px solid red;
-}
+} */
