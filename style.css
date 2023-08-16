@@ -140,6 +140,23 @@ body {
     font-family: 'Cherry Bomb One', cursive;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+.main h1 {
+    font-size: 4em;
+    font-weight: 400;
+    color: white;
+}
+
 .background-star1 {
     width: 3px;
     height: 3px;
@@ -431,33 +448,23 @@ body {
     }
 }
 
-
-.container {
+#allStars {
+    max-width: 800px;
+    margin: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
+
 }
 
 
-.container h1 {
-    font-size: 4em;
-    font-weight: 400;
-    color: white;
-}
-
-
-
-/* .starOne {
-    width: 50%;
-    height: 50%;
-    background: url(star.png) no-repeat center;
+img {
+    width: 250px;
+    /* height: 250px; */
+    /* background: url(star.png) no-repeat center; */
     margin: 0 auto;
 
-} */
+}
 
 /* .one {
     width: 50%;
@@ -480,4 +487,8 @@ body {
 
 #next {
     background: hsl(49, 100%, 50%);
+}
+
+* {
+    outline: 1px solid red;
 }
