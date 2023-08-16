@@ -3,8 +3,8 @@
 
 let container = document.querySelector('.allStars');
 const newImage = document.createElement('img');
-const baseURL = 'images/';
-const baseFxURL = 'soundfx/';
+const baseURL = 'https://github.com/domdk/CountingToTen/tree/main/images/';
+const baseFxURL = 'https://github.com/domdk/CountingToTen/tree/main/soundfx/';
 const startOverButton = document.querySelector('.startOver');
 const nextButton = document.querySelector('.next');
 const title = document.querySelector('.title');
@@ -51,7 +51,7 @@ startOverButton.addEventListener('click', function () {
 
     nextButton.innerHTML = "Count Again";
 
-    const countAgain = new Audio('soundfx/count_again.wav');
+    const countAgain = new Audio('https://github.com/domdk/CountingToTen/tree/main/soundfx/count_again.wav');
     countAgain.play();
 
 
